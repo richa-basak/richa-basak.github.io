@@ -1,62 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richa's Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Richa Basak</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      font-size: 14px;
+      background-color: #f4f4f4;
+      color: #222;
+      margin: 2em auto;
+      padding: 2em 1em;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    main {
+      background-color: #fff;
+      padding: 2em;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      line-height: 1.6;
+    }
+
+    aside {
+      margin-left: 2em;
+      padding-top: 1em;
+      position: sticky;
+      top: 2em;
+      height: fit-content;
+    }
+
+    aside nav {
+      display: flex;
+      flex-direction: column;
+    }
+
+    aside nav a {
+      margin-bottom: 1em;
+      color: #3366cc;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    aside nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      font-weight: normal;
+      margin-bottom: 0.1em;
+    }
+
+    .location {
+      color: #888;
+      margin-bottom: 2em;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      font-weight: normal;
+      margin-top: 1.5em;
+    }
+
+    ul.links {
+      list-style: none;
+      padding: 0;
+      margin: 1.5em 0;
+      display: flex;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
+
+    ul.links li {
+      display: flex;
+      align-items: center;
+    }
+
+    ul.links a {
+      color: #3366cc;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+    }
+
+    ul.links a:hover {
+      text-decoration: underline;
+    }
+
+    .email {
+      margin-top: 2em;
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+
+    section {
+      margin-top: 2em;
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .values-section {
+      border-left: 4px solid #3366cc;
+      padding: 1em;
+      margin-top: 2em;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .values-section:hover {
+      transform: scale(1.01);
+    }
+
+    .values-section ul li::before {
+      content: "\2728 ";
+      margin-right: 0.5em;
+    }
+
+    .values-section blockquote {
+      font-style: italic;
+      margin: 1em 0;
+      padding-left: 1em;
+      border-left: 3px solid #ccc;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Richa Basak</h1>
-        <p>Senior Software Engineer</p>
-    </header>
+  <div class="container">
+    <main>
+      <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <h1>Richa Basak •</h1>
+      <p class="location">Mountain View, CA</p>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/richa-basak" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" class="icon" alt="LinkedIn">linkedin.com/in/richa-basak</a></li>
+        <li><a href="https://github.com/richa-basak" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" class="icon" alt="GitHub">github.com/richa-basak</a></li>
+        <li><a href="mailto:richa.basak@gmail.com"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" class="icon" alt="Email">richa.basak@gmail.com</a></li>
+      </ul>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Experienced software engineer specializing in backend development, data analysis, and scalable system design.</p>
-    </section>
+      <section id="values" class="values-section">
+        <blockquote>
+          “Simplicity is the ultimate sophistication” – Leonardo da Vinci
+        </blockquote>
+      </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Project Title 1</h3>
-                <p>A brief description of your project, what you achieved, and the technologies used.</p>
-            </div>
-            <div class="project">
-                <h3>Project Title 2</h3>
-                <p>A brief description of another project with highlights.</p>
-            </div>
-        </div>
-    </section>
+      
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>JavaScript, Python, C++</li>
-            <li>Data Analysis, Machine Learning</li>
-            <li>Cloud Computing, AWS, Docker</li>
-        </ul>
-    </section>
+    </main>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-        <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Dipto</p>
-    </footer>
+    <aside>
+      <nav>
+        <a href="#outside">Life & Interests</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Profession</a>
+      </nav>
+    </aside>
+  </div>
 </body>
 </html>
